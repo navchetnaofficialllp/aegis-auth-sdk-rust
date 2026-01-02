@@ -1,0 +1,29 @@
+[package]
+name = "aegis-auth-navchetna"
+version = "1.0.1"
+edition = "2021"
+authors = ["Navchetna Technologies <hello@navchetna.tech>"]
+description = "Aegis Auth is a unified identity management system providing memory-safe Rust-based authentication. Consolidation of disparate identity providers into a single canonical source."
+license = "MIT"
+repository = "https://github.com/navchetnaofficialllp/aegis-auth-sdk-rust"
+homepage = "https://github.com/navchetnaofficialllp/aegis-auth-sdk-rust"
+documentation = "https://aegis.navchetna.tech"
+readme = "README.md"
+keywords = ["authentication", "auth", "webauthn", "mfa", "jwt", "aegis", "security", "rust", "identity", "decentralized"]
+categories = ["authentication", "api-bindings", "web-programming"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["time", "rt", "macros"] }
+thiserror = "1.0"
+url = "2.4"
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[lib]
+name = "aegis_auth"
+path = "src/lib.rs"
